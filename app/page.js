@@ -93,7 +93,7 @@ export default function Home() {
       </div>
 
       {/* Group A */}
-      <div class="grouplabel"><label>Sorte</div>
+      <div class="grouplabel"><label>Sorte</label></div>
       <div className="grid gridA">
         {config.groupA.map((box, index) => (
           <div
@@ -131,7 +131,7 @@ export default function Home() {
       </div>
 
       {/* Group B */}
-      <div class="grouplabel"><label>Wunschdosierung</div>
+      <div class="grouplabel"><label>Wunschdosierung</label></div>
       <div className="grid gridB">
         {config.groupB.map((box, index) => (
           <div
