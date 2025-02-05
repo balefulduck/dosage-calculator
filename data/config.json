@@ -1,0 +1,42 @@
+{
+  "groupA": [
+    {
+      "title": "Orange Skittlez",
+      "value": 5.14
+    },
+    {
+      "title": "Bubba Kush",
+      "value": 11.1
+    },
+    {
+      "title": "Rainbow Sherbert",
+      "value": 15
+    },
+    {
+      "title": "Cranebreak",
+      "value": 0.12
+    },
+    {
+      "title": "Purple Punch",
+      "value": 7.421
+    },
+    {
+      "title": "Lebanese",
+      "value": 40.16
+    }
+  ],
+  "groupB": [
+    {
+      "title": "NIedrig",
+      "value": 5
+    },
+    {
+      "title": "Mittel",
+      "value": 20
+    },
+    {
+      "title": "Hoch",
+      "value": 50
+    }
+  ]
+}
