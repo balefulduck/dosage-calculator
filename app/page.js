@@ -105,7 +105,10 @@ return () => window.removeEventListener("keydown", handleKeyDown);
     )}
 
       {/* Group A */}
-      <div class="grouplabel"><label>Sortenauswahl</label></div>
+      <div className="container">
+     <div className="heading-container">
+       <h2 className="heading">Sorten</h2>
+     </div>
       <div className="grid gridA">
         {config.groupA.map((box, index) => (
           <div
@@ -143,7 +146,9 @@ return () => window.removeEventListener("keydown", handleKeyDown);
       </div>
 
       {/* Group B */}
-      <div class="grouplabel"><label>Wunschdosierung</label></div>
+      <div className="heading-container">
+        <h2 className="heading">Wunschdosis</h2>
+      </div>
       <div className="grid gridB">
         {config.groupB.map((box, index) => (
           <div
@@ -248,17 +253,13 @@ return () => window.removeEventListener("keydown", handleKeyDown);
           transition: background-color 0.3s ease, color 0.3s ease;
         }
         .grouplabel{
-          margin-top: 10px;
-          padding: 10px;
-          text-align: center;
-          font-size: 1.3em;
-          font-weight: bold;
-          background-color: rgba(33, 135, 91, 0);
-          border: 2px solid rgba(33, 135, 91, 0.5);
-          color: rgba(0, 0, 0, 0.3);
-          transition: background-color 0.3s ease, color 0.3s ease;
+          background-color: #21875b; /* Green background */
+          color: #1F1E1E;
+          padding: 6px 8px;
+          border-radius: 5px;
+          font-size: 1.5rem;
         }
-        }
+
         .result.active {
           background-color: #21875b;
           color: white;
@@ -281,6 +282,20 @@ return () => window.removeEventListener("keydown", handleKeyDown);
           margin: 20px auto;
           padding: 10px 20px;
         }
+
+       .heading-container {
+         display: flex;
+         justify-content: center;
+         margin-bottom: 15px;
+       }
+
+       .heading {
+         background-color: #21875b; /* Green background */
+         color: white; /* White text color */
+         padding: 10px 20px; /* Add some padding for space around text */
+         border-radius: 5px; /* Optional: rounded corners */
+         font-size: 1.5rem; /* You can adjust the size */
+       }
       `}</style>
     </div>
   );
