@@ -224,7 +224,7 @@ export default function Home() {
           border: 2px solid blue;
           background-color: #e0f0ff;
         }
-        .result .grouplabel{
+        .result{
           margin-top: 20px;
           padding: 20px;
           text-align: center;
@@ -234,6 +234,18 @@ export default function Home() {
           border: 2px solid rgba(33, 135, 91, 0.5);
           color: rgba(0, 0, 0, 0.3);
           transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .grouplabel{
+          margin-top: 10px;
+          padding: 10px;
+          text-align: center;
+          font-size: 1.3em;
+          font-weight: bold;
+          background-color: rgba(33, 135, 91, 0);
+          border: 2px solid rgba(33, 135, 91, 0.5);
+          color: rgba(0, 0, 0, 0.3);
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
         }
         .result.active {
           background-color: #21875b;
