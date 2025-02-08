@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import OilCalculator from "../components/OilCalculator";
 
 export default function Home() {
   const [config, setConfig] = useState(null);
@@ -12,6 +13,7 @@ export default function Home() {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const correctPassword = "drc";
   const [showEditControls, setShowEditControls] = useState(false);
+  const [topValue, setTopValue] = useState({number: 1, box: null});
 
   useEffect(() => {
     fetch("/api/config")
@@ -84,7 +86,15 @@ return () => window.removeEventListener("keydown", handleKeyDown);
     }
   };
 
+  const handleOilCalculatorChange = (number, box) => {
+    setTopValue({number,box});
+  }
+
   return (
+
+    <div>
+      <OilCalculator onChange="{handleOilCalculatorChange} />
+    </div>
     <div className="container">
     {showEditControls && (
       <div className="edit-toggle">
@@ -103,6 +113,9 @@ return () => window.removeEventListener("keydown", handleKeyDown);
         </button>
       </div>
     )}
+
+      {/* Oil calcuator */}
+
 
       {/* Group A */}
       <div class="grouplabel"><label>Sortenauswahl</label></div>
@@ -268,7 +281,7 @@ return () => window.removeEventListener("keydown", handleKeyDown);
             background-color: #312A2D;
           }
         }
-        
+
 
         .result {
           margin-top: 20px;
