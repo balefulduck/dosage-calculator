@@ -92,10 +92,8 @@ return () => window.removeEventListener("keydown", handleKeyDown);
 
   return (
 
-    <div>
-      <OilCalculator onChange={handleOilCalculatorChange} />
-    </div>
     <div className="container">
+    <OilCalculator onChange={handleOilCalculatorChange} />
     {showEditControls && (
       <div className="edit-toggle">
         {!editMode && !isAuthorized && (
