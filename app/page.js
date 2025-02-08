@@ -11,6 +11,7 @@ export default function Home() {
   const [passwordInput, setPasswordInput] = useState("");
   const [isAuthorized, setIsAuthorized] = useState(false);
   const correctPassword = "drc";
+  const [showEditControls, setShowEditControls] = useState(false);
 
   useEffect(() => {
     fetch("/api/config")
@@ -23,6 +24,15 @@ export default function Home() {
         console.error(err);
         setLoading(false);
       });
+
+      const handleKeyDown = (event) => {
+  if (event.ctrlKey && event.shiftKey && event.key === "E") {
+    setShowEditControls((prev) => !prev); // Toggle visibility
+  }
+};
+
+window.addEventListener("keydown", handleKeyDown);
+return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   if (loading) return <div>Loading...</div>;
@@ -76,6 +86,7 @@ export default function Home() {
 
   return (
     <div className="container">
+    {showEditControls && (
       <div className="edit-toggle">
         {!editMode && !isAuthorized && (
           <div className="password-input">
@@ -91,6 +102,7 @@ export default function Home() {
           {editMode ? "Exit Edit Mode" : "Enter Edit Mode"}
         </button>
       </div>
+    )}
 
       {/* Group A */}
       <div class="grouplabel"><label>Sortenauswahl</label></div>
