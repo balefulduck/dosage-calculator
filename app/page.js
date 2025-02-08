@@ -208,11 +208,7 @@ return () => window.removeEventListener("keydown", handleKeyDown);
           }
         }
         
-        body {
-          background-color: var(--bg-color);
-          color: var(--text-color);
-          transition: background-color 0.3s ease, color 0.3s ease;
-        }
+
         .container {
           padding: 20px;
           max-width: 600px;
