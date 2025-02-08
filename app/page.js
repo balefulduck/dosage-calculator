@@ -193,11 +193,26 @@ return () => window.removeEventListener("keydown", handleKeyDown);
 
       <style jsx>{`
         :root {
-          color-scheme: light;
-          background-color: cornsilk;
-          color: #171717;
+          --bg-color: FFE6FB;
+          --text-color: black;
+          --box-bg: #f0f0f0;
+          --box-text: black;
         }
         
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --bg-color: #121212;
+            --text-color: white;
+            --box-bg: #1e1e1e
+            --box-text: white;
+          }
+        }
+        
+        body {
+          background-color: var(--bg-color);
+          color: var(--text-color);
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
         .container {
           padding: 20px;
           max-width: 600px;
@@ -230,7 +245,9 @@ return () => window.removeEventListener("keydown", handleKeyDown);
           margin-bottom: 20px;
         }
         .box {
-          border: 1px solid gray;
+          border: 1px solid var(--text-color);
+          color: var(--box-text);
+          background-color: var(--box-bg);
           padding: 10px;
           text-align: center;
           cursor: pointer;
