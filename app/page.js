@@ -13,7 +13,7 @@ export default function Home() {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const correctPassword = "drc";
   const [showEditControls, setShowEditControls] = useState(false);
-  const [topValue, setTopValue] = useState({number: 1, box: null});
+  const [topValue, setTopValue] = useState({number: null, box: null});
 
   useEffect(() => {
     fetch("/api/config")
