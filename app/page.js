@@ -180,6 +180,12 @@ export default function Home() {
       </div>
 
       <style jsx>{`
+        :root {
+          color-scheme: light;
+          background-color: cornsilk;
+          color: #171717;
+        }
+        
         .container {
           padding: 20px;
           max-width: 600px;
