@@ -93,7 +93,7 @@ return () => window.removeEventListener("keydown", handleKeyDown);
   return (
 
     <div>
-      <OilCalculator onChange="{handleOilCalculatorChange} />
+      <OilCalculator onChange={handleOilCalculatorChange} />
     </div>
     <div className="container">
     {showEditControls && (
