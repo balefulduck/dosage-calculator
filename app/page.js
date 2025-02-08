@@ -198,7 +198,7 @@ return () => window.removeEventListener("keydown", handleKeyDown);
           --box-bg: #f0f0f0;
           --box-text: black;
         }
-        
+
         @media (prefers-color-scheme: dark) {
           :root {
             --bg-color: #121212;
@@ -207,39 +207,45 @@ return () => window.removeEventListener("keydown", handleKeyDown);
             --box-text: white;
           }
         }
-        
+
 
         .container {
           padding: 20px;
           max-width: 600px;
           margin: 0 auto;
         }
+
         .edit-toggle {
           display: flex;
           align-items: center;
           gap: 10px;
           margin-bottom: 20px;
         }
+
         .password-input input {
           padding: 5px;
           font-size: 1em;
         }
+
         button {
           padding: 10px;
           font-size: 1em;
         }
+
         .gridA {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 10px;
           margin-bottom: 20px;
         }
+
         .gridB {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 10px;
           margin-bottom: 20px;
         }
+
         .box {
           border: 1px solid var(--text-color);
           color: var(--box-text);
@@ -251,11 +257,20 @@ return () => window.removeEventListener("keydown", handleKeyDown);
           font-size: 1em;
           transition: border-color 0.2s, background-color 0.2s;
         }
+
         .box.active {
-          border: 2px solid blue;
+          border: 2px solid #84ff00;
           background-color: #e0f0ff;
         }
-        .result{
+        @media (prefers-color-scheme: dark) {
+          .box.active {
+            border: 2px solid #84ff00;
+            background-color: #312A2D;
+          }
+        }
+        
+
+        .result {
           margin-top: 20px;
           padding: 20px;
           text-align: center;
@@ -266,7 +281,8 @@ return () => window.removeEventListener("keydown", handleKeyDown);
           color: rgba(0, 0, 0, 0.3);
           transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .grouplabel{
+
+        .grouplabel {
           margin-top: 10px;
           padding: 10px;
           text-align: center;
@@ -277,24 +293,29 @@ return () => window.removeEventListener("keydown", handleKeyDown);
           color: rgba(0, 0, 0, 0.3);
           transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         }
         .result.active {
           background-color: #21875b;
           color: white;
           border: 2px solid #21875b;
         }
+
         input {
           display: block;
           margin: 5px auto;
           padding: 5px;
           width: 80%;
         }
+
         .title {
           font-weight: bold;
         }
+
         .val {
           margin-top: 5px;
         }
+
         .save-button {
           display: block;
           margin: 20px auto;

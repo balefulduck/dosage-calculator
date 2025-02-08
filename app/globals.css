@@ -1,7 +1,7 @@
 :root {
-  --background: #FFE6FB;
+  --background: #faf5f6;
   --foreground: #171717;
-  --bg-color: #FFE6FB;
+  --bg-color: #faf5f6;
   --text-color: black;
   --box-bg: #f0f0f0;
   --box-text: black;
@@ -13,7 +13,7 @@
     --foreground: #ededed;
     --bg-color: #121212;
     --text-color: white;
-    --box-bg: #1e1e1e
+    --box-bg: #1e1e1e;
     --box-text: white;
   }
 }
